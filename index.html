@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/styles.css"/>
+  <link id="hostStyle" rel="stylesheet" href="css/button.css"/>
+</head>
+<!--body onload="loadGoogle()"-->
+<!--iframe src="https://www.trello.com"></iframe--> <!-- this line can be deleted as HTTPS blocks content being displayed in an iframe -->
+
+<body>
+  <button id="btn">no-onclick</button>
+  <button id="btn1" onclick="btnSelected()">butSelected</button>
+  <button id="button_2" class="button2 buttonGreen" onclick="csinterfaceFun()">call csinterfaceFun()</button>
+  <button id="button_3" class="button4 buttonBlue">Blue B</button>
+  <p> world </p>
+  <ul>
+  <li><button onclick="window.cep.util.openURLInDefaultBrowser('http://www.adobe.com')">Open browser</button></li>
+  </ul>
+</body>
+<script src="./lib/CSInterface.6.js"></script>
+<script src="./js/main.js"></script>
+<script src="./jsx/id.jsx"></script>
+
+</html>

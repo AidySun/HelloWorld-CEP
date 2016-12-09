@@ -4,22 +4,37 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/styles.css"/>
   <link id="hostStyle" rel="stylesheet" href="css/button.css"/>
-</head>
-<!--body onload="loadGoogle()"-->
-<!--iframe src="https://www.trello.com"></iframe--> <!-- this line can be deleted as HTTPS blocks content being displayed in an iframe -->
+  <link type="text/css" rel="stylesheet" href="sh/shCore.css"/>
+  <link type="text/css" rel="stylesheet" href="sh/shThemeDefault.css"/>
 
-<body>
-  <button id="btn">no-onclick</button>
-  <button id="btn1" onclick="btnSelected()">butSelected</button>
-  <button id="button_2" class="button2 buttonGreen" onclick="csinterfaceFun()">call csinterfaceFun()</button>
-  <button id="button_3" class="button4 buttonBlue">Blue B</button>
-  <p> world </p>
-  <ul>
-  <li><button onclick="window.cep.util.openURLInDefaultBrowser('http://www.adobe.com')">Open browser</button></li>
-  </ul>
+  <!-- BEGIN syntax highlighter -->
+  <script type="text/javascript" src="sh/shCore.js"></script>
+  <script type="text/javascript" src="sh/shBrushJScript.js"></script>
+  <script type="text/javascript">
+    SyntaxHighlighter.all();
+  </script>
+  <script type="text/javascript" src="lib/jQuery.1.8.3.min.js"></script>
+  <script type="text/javascript" src="lib/jquery.searchabledropdown-1.0.8.src.js"></script>
+  
+  <script type="text/javascript">
+
+    $(document).ready(function() {
+      $("#myselect").searchable();
+    });
+  </script>
+ 
+</head>
+
+<body onload="myOnLoad()">
+  <form>
+       <script src="/tmp/com.example.helloworld.extension/IDSN.html.js"></script>
+    <!--select id="myselect"  class="myselectstyle" autofocus=true--> 
+
+  </form>
+
+  <button id="button_2" class="button1" onclick="createHTML()">createHTML11()</button>
+
 </body>
 <script src="./lib/CSInterface.6.js"></script>
 <script src="./js/main.js"></script>
-<script src="./jsx/id.jsx"></script>
-
 </html>

@@ -1,3 +1,16 @@
+.myselectstyle {
+    border: none;
+    font-size: 18px;
+    width: 100%;
+}
+
+.normalSelect {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    width: 100px;
+    padding: 20px 32px;
+}
+
 .button {
     background-color: #4CAF50; /* Green */
     border: none;

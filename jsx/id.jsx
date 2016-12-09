@@ -1,6 +1,18 @@
+#include "ddl.jsx"
+
 function addDocument() {
-	alert("open");
-	application.documents.add();
+	app.documents.add();
+}
+
+
+function showAllActionTitles() {
+	var menuActions = app.menuActions;
+	var allActionsStr = "";
+	for (var i = menuActions.length - 1; i >= 0; i--) {
+		allActionsStr += menuActions[i].title;
+		allActionsStr += ", ";
+	}
+	alert(allActionsStr);
 }
 
 function btnSelected() {

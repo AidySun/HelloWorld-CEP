@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <ExtensionManifest ExtensionBundleId="com.example.helloworld" ExtensionBundleName="Hello world" ExtensionBundleVersion="1.0" Version="4.0">
+  <Author>Eric.DWKJ</Author>
+  <Contact mailto="eric.dwkj@gmail.com">Support</Contact>
   <ExtensionList>
     <Extension Id="com.example.helloworld.extension" Version="1.0"/>
   </ExtensionList>
@@ -27,28 +29,36 @@
             <Parameter>- -enable-media-stream</Parameter>
           </CEFCommandLine>
           -->
-          <script src="./js/main.js"></script>
+          <ScriptPath>./jsx/id.jsx</ScriptPath>
+          <ScriptPath>./jsx/ddl.jsx</ScriptPath>
         </Resources>
-        <Lifecycle>
-          <AutoVisible>true</AutoVisible>
+        <!--Lifecycle>
+          <AutoVisible>false</AutoVisible>
           <StartOn>
             <Event>applicationActivate</Event>
           </StartOn>
-        </Lifecycle>
+        </Lifecycle-->
 
         <UI>
-          <!--Menu Placement="'Main:&amp;Window',601.0,'KBSCE Window menu'">Hello World[*]</Menu-->
-          <Type>Panel</Type>
+          <Type>Modeless</Type>
           <Menu>Hello world</Menu>
           <Geometry>
             <ScreenPercentage>
-              <Height>100%</Height>
-              <Width>100%</Width>
+              <Height>10%</Height>
+              <Width>50%</Width>
             </ScreenPercentage>
-            <!--Size>
-              <Height>400</Height>
-              <Width>400</Width>
-            </Size-->
+            <Size>
+              <Height>100</Height>
+              <Width>500</Width>
+            </Size>
+            <MaxSize>
+              <Height>750</Height>
+              <Width>2000</Width>
+            </MaxSize>
+            <MinSize>
+              <Height>10</Height>
+              <Width>100</Width>
+            </MinSize>
           </Geometry>
         </UI>
       </DispatchInfo>

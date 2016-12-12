@@ -1,7 +1,25 @@
-.myselectstyle {
-    border: none;
-    font-size: 18px;
-    width: 100%;
+select{
+  /*font-size: 30pt;
+  color: #DCDCDC;*/
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 5px 15px 5px 50px;
+  font: 30px arial, sans-serif;
+  border: none;
+  border-radius: 4px;
+  background: transparent url("https://cdn3.iconfinder.com/data/icons/faticons/32/search-01-48.png") no-repeat left center;
+  background-size: 40px 40px;
+
+}
+
+option{
+  /*font-size: 30pt;
+  color: #DCDCDC;*/
+  padding: 5px 15px 5px 50px;
+  font: 30px arial, sans-serif;
+  border: none;
+  border-radius: 4px;
 }
 
 .normalSelect {

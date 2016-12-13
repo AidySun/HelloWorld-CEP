@@ -2,12 +2,16 @@
 $('#myselect').on('keydown',function(e) {
 	var key = e.which;
   if(key == 13) { // the enter key code
-    doAction($("#myselect").val());
-    window.close();
+    //doAction($("#myselect").val());
+    //window.close();
   } 
   if(key == 27) { // the escape key code
     window.close();
   }
+});
+
+$('#refresh').on('click', function(e) {
+  createHTML();
 });
 
 function doAction(actionID) {
@@ -17,24 +21,22 @@ function doAction(actionID) {
 }
 
 function myOnLoad() {
-/*
-    $("#includedContent").load(getTempFolder()+"IDSN.html"); 
-
-    $("#myselect").searchable();
-    
-    $("#myselect").change(function(){
-        doAction(this.value);
-      });
-*/
+    new CSInterface().evalScript("$._Ext_IDSN.doesFileExist(\"" + tempJSFFilePath() + "\")", function (result) {
+      if (result == "No") {
+        createHTML();
+        location.reload();
+      }
+    }); 
 }
 
+function tempJSFFilePath() { 
+  return createTempFolder() + "IDSN.html.js";
+}
 
 function createHTML() {
-	var tempFile = createTempFolder() + "IDSN.html";
-	var csInterface = new CSInterface();
-	csInterface.evalScript("$._CEP_CC.selectWithOptions()", function (result) {
-			window.cep.fs.writeFile(tempFile, result);
-	//		window.cep.fs.setPosixPermissions(tempFile, "777");
+	var tempFile = tempJSFFilePath();
+	new CSInterface().evalScript("$._Ext_IDSN.selectWithOptions()", function (result) {
+		window.cep.fs.writeFile(tempFile, result);
 		});	
 }
 

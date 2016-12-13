@@ -1,26 +1,44 @@
+
+body{
+  background-color: #DCDCDC;
+}
 select{
-  /*font-size: 30pt;
-  color: #DCDCDC;*/
+  font-size: 16pt;
+  color: #DCDCDC;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   padding: 5px 15px 5px 50px;
-  font: 30px arial, sans-serif;
   width: 500px;
   border: none;
   border-radius: 4px;
   background-size: 40px 40px;
+/*  
+  font: 24px arial, sans-serif;
+  font-family: "Arial Black", Gadget, sans-serif;
+*/
+  font-family: Arial, Helvetica, sans-serif;
 
 }
+
 #myselect {
-  background: transparent url("https://cdn3.iconfinder.com/data/icons/faticons/32/search-01-48.png") no-repeat left center;
+ /* background: transparent url("https://cdn3.iconfinder.com/data/icons/faticons/32/search-01-48.png") no-repeat left center;*/
 }
 
 option{
-  /*font-size: 30pt;
+  font-size: 12pt;
+  /*font: 30px arial, sans-serif;
   color: #DCDCDC;*/
   padding: 5px 15px 5px 50px;
-  font: 30px arial, sans-serif;
+  border: gray;
+  border-radius: 4px;
+}
+
+option .placeholder{
+  /*font-size: 30pt;
+  font: 10px arial, sans-serif;
+  color: #DCDCDC;*/
+  padding: 5px 15px 5px 50px;
   border: none;
   border-radius: 4px;
 }
@@ -28,7 +46,7 @@ option{
 #refresh {
   border: none;
   border-radius: 5px;
-  background: transparent url("https://cdn3.iconfinder.com/data/icons/faticons/32/search-01-48.png") no-repeat left center;
+/*  background: transparent url("https://cdn3.iconfinder.com/data/icons/faticons/32/search-01-48.png") no-repeat left center;*/
 }
 
 .normalSelect {

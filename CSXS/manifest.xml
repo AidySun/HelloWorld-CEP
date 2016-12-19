@@ -41,23 +41,23 @@
 
         <UI>
           <Type>Modeless</Type>
-          <Menu>Hello world</Menu>
+          <Menu>Quick Apply</Menu>
           <Geometry>
-            <ScreenPercentage>
+            <!--ScreenPercentage>
               <Height>10%</Height>
               <Width>50%</Width>
-            </ScreenPercentage>
+            </ScreenPercentage-->
             <Size>
-              <Height>100</Height>
-              <Width>500</Width>
+              <Height>80</Height>
+              <Width>660</Width>
             </Size>
             <MaxSize>
-              <Height>750</Height>
+              <Height>1750</Height>
               <Width>2000</Width>
             </MaxSize>
             <MinSize>
-              <Height>10</Height>
-              <Width>100</Width>
+              <Height>60</Height>
+              <Width>200</Width>
             </MinSize>
           </Geometry>
         </UI>

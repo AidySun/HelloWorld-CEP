@@ -1,49 +1,32 @@
 <!doctype html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="css/styles.css"/>
-  <link id="hostStyle" rel="stylesheet" href="css/button.css"/>
-  <link type="text/css" rel="stylesheet" href="sh/shCore.css"/>
-  <link type="text/css" rel="stylesheet" href="sh/shThemeDefault.css"/>
+	<meta charset="utf-8">
 
-  <!-- BEGIN syntax highlighter -->
-  <script type="text/javascript" src="sh/shCore.js"></script>
-  <script type="text/javascript" src="sh/shBrushJScript.js"></script>
-  <script type="text/javascript">
-    SyntaxHighlighter.all();
-  </script>
-  <script type="text/javascript" src="lib/jQuery.1.8.3.min.js"></script>
-  <script type="text/javascript" src="lib/jquery.searchabledropdown-1.0.8.src.js"></script>
-  
-  <script type="text/javascript">
+	<script src="./lib/jquery-1.9.1.js"></script>
+	<script src="./lib/select2-4.0.3/dist/js/select2.full.js"></script>
+	<script src="./lib/CSInterface.6.js"></script>
+	<script src="./js/main.js"></script>
 
-    $(document).ready(function() {
-      $("#myselect").searchable();
-    });
-  </script>
- 
- <style>
- select:invalid { color: gray; }
- </style>
+	<link rel="stylesheet" href="lib/select2-4.0.3/dist/css/select2.css"/>
+	<link rel="stylesheet" href="css/styles.css"/>
 </head>
 
-<body onload="myOnLoad()">
-  <span>
-    <button class="button" id="refresh"></button>
-  </span>
-  <form>
-  <span>
-       <script src="/tmp/com.example.helloworld.extension/IDSN.html.js"></script>
-  </span>
-    <!--select id="myselect"  class="myselectstyle" autofocus=true--> 
-
-  </form>
-
-  <!--button id="button_2" class="button1" onclick="createHTML()">createHTML11()</button-->
-
-
+<script type="text/javascript">
+$(document).ready(function() {
+});
+	
+</script>
+<body onload="onLoad()">
+	<div>
+		<!--span>
+			<button class="button" id="refresh"></button>
+		</span-->
+		<span id="menuListSpan">
+			<script src="menu.js"></script>
+			<!--script onload="this.onload=null; this.src=getDataFile();"></script-->
+		</span>
+	</div>
 </body>
-<script src="./lib/CSInterface.6.js"></script>
-<script src="./js/main.js"></script>
+	<script src="./js/select2.keydown.js"></script>
 </html>

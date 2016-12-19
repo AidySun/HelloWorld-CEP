@@ -2,21 +2,21 @@ var $select2Obj = $("select");
 
 
 function redirect() {
-  new CSInterface().evalScript("$._Ext_IDSN.doesFileExist(\"" + getDataFile() + "\")", function(result) {
-   if (result == "Yes") {
-     window.location=getDataFile();
-   }
+  var htmlFile = getHTMLFile();
+  var csInterface = new CSInterface();
+
+  csInterface.evalScript("$._Ext_IDSN.doesFileExist(\"" + htmlFile + "\")", function(result) {
+    if (result == "No") {
+      generateHTMLFile();
+      location.reload();
+    }
+    if (result == "Yes") {
+     window.location = htmlFile;
+    }
   });
 }
 
 function onLoad() {
-  new CSInterface().evalScript("$._Ext_IDSN.doesFileExist(\"" + getDataFile() + "\")", function(result) {
-    if (result == "No") {
-      createHTML();
-      location.reload();
-    }
-  });
-
   $select2Obj.val("").trigger("change");
   $select2Obj.select2("open");
 }
@@ -62,18 +62,30 @@ function smallUI() {
   CSInterface.prototype.resizeContent(615, 60);
 }
 
-function getDataFile() {
+function getHTMLFile() {
   var sysPath = new CSInterface().getSystemPath(SystemPath.EXTENSION);
   var hostEnv = new CSInterface().getHostEnvironment();
-  var dataFile = sysPath + '/' + hostEnv.appId + '_' + hostEnv.appUILocale + '_' + hostEnv.appVersion + '.js';
+  var dataFile = sysPath + '/' + hostEnv.appId + '_' + hostEnv.appUILocale + '_' + hostEnv.appVersion + '.html';
   return dataFile;
 }
 
-function createHTML() {
+
+function createHTML_old() {
   var tempFile = getDataFile();
   new CSInterface().evalScript("$._Ext_IDSN.selectWithOptions()", function(result) {
     window.cep.fs.writeFile(tempFile, result);
   });
+}
+
+function generateHTMLFile() {
+  var htmlFile = getHTMLFile();
+  new CSInterface().evalScript("$._Ext_IDSN.generateHTML()", function(result) {
+    var fileResult = window.cep.fs.writeFile(htmlFile, result);
+    if (0 == fileResult.err) {
+      return true;
+    }
+  });
+  return false;
 }
 
 $('input').on('keydown', function(e) {

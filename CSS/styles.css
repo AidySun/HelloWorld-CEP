@@ -1,13 +1,4 @@
 
-.select2-search__field {
-}
-
-#refresh {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  padding: 5px 0px 5px 0px;
-}
 
 select{
   position: relative;
@@ -49,3 +40,20 @@ input:hover{
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   float: left;
 }
+
+#refresh {
+  display: inline-block;
+  cursor: pointer;
+  border: black;
+  border-width: 0.5px;
+  border-image-width: 0.5px;
+  border-radius: 5px;
+  box-shadow: 0;
+  background-color: white;
+  padding: 20px 20px 20px 20px;
+}
+
+#refresh:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+

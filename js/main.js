@@ -1,9 +1,8 @@
+var csInterface = new CSInterface();
 var $select2Obj = $("select");
-
 
 function redirect() {
   var htmlFile = getHTMLFile();
-  var csInterface = new CSInterface();
 
   csInterface.evalScript("$._Ext_IDSN.doesFileExist(\"" + htmlFile + "\")", function(result) {
     if (result == "No") {
@@ -18,6 +17,7 @@ function redirect() {
 
 function onLoad() {
   $select2Obj.val("").trigger("change");
+//  $select2Obj.select2("val", "");
   $select2Obj.select2("open");
 }
 
@@ -47,8 +47,7 @@ $select2Obj.on("select2:close", function (e) {
 
 
 $('#refresh').on('click', function(e) {
-//  createHTML();
-location.reload();
+  redirect();
 });
 
 

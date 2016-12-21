@@ -94,9 +94,10 @@ function matchAny(term, text) {
     
     
     $('select').select2({
-      // maximumSelectionLength: 1,
+      maximumSelectionLength: 1,
+      //minimumResultsForSearch: -1,
       selectOnClose: false,
-      closeOnSelect: true,
+      closeOnSelect: false,
       multiple: 'multiple',
       placeholder: 'Search Menus (ENTER to run, ESC to close)',
       matcher: oldMatcher(matchAny)

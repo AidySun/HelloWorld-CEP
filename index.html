@@ -1,40 +1,22 @@
 <!doctype html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="css/styles.css"/>
-  <link id="hostStyle" rel="stylesheet" href="css/button.css"/>
-  <link type="text/css" rel="stylesheet" href="sh/shCore.css"/>
-  <link type="text/css" rel="stylesheet" href="sh/shThemeDefault.css"/>
+	<meta charset="utf-8">
+	<meta http-equiv="refresh" content="1" />
+	<script src="./lib/jquery-1.9.1.js"></script>
+	<script src="./lib/CSInterface.6.js"></script>
+	<script src="./js/main.js"></script>
 
-  <!-- BEGIN syntax highlighter -->
-  <script type="text/javascript" src="sh/shCore.js"></script>
-  <script type="text/javascript" src="sh/shBrushJScript.js"></script>
-  <script type="text/javascript">
-    SyntaxHighlighter.all();
-  </script>
-  <script type="text/javascript" src="lib/jQuery.1.8.3.min.js"></script>
-  <script type="text/javascript" src="lib/jquery.searchabledropdown-1.0.8.src.js"></script>
-  
-  <script type="text/javascript">
-
-    $(document).ready(function() {
-      $("#myselect").searchable();
-    });
-  </script>
- 
+	<link rel="stylesheet" href="css/styles.css"/>
 </head>
 
-<body onload="myOnLoad()">
-  <form>
-       <script src="/tmp/com.example.helloworld.extension/IDSN.html.js"></script>
-    <!--select id="myselect"  class="myselectstyle" autofocus=true--> 
+<script type="text/javascript">
+	redirect();
+</script>
 
-  </form>
-
-  <button id="button_2" class="button1" onclick="createHTML()">createHTML11()</button>
-
+<body>
+<div align="center">
+	<button id="refresh">Collect Menus</button>
+	</div>
 </body>
-<script src="./lib/CSInterface.6.js"></script>
-<script src="./js/main.js"></script>
 </html>

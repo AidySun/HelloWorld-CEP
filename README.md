@@ -9,11 +9,13 @@ This is a HTML5 extension of Adobe InDesign that implements the feature of Quick
 
 
 # Installation
-1. Copy the directory QuickApply-CEP to the system extension folder
-  - macOS: ```/Library/Application Support/Adobe/CEP/extensions/```
-  - Windows: ```C:\Program Files (x86)\Common Files\Adobe\CEP\extensions\```
-
-2. Launching Adobe InDesign CC 2015[7], then open the dialog via menu **Window->Extensions->Search Menu**.
+1. Copy the entire folder *QuickApply-CEP* to the system extension folder
+  ```
+  Mac: /Library/Application Support/Adobe/CEP/extensions/
+  Win: C:\Program Files (x86)\Common Files\Adobe\CEP\extensions\
+  ```
+2. Launch Adobe InDesign CC 2015[7].
+3. Open the dialog with menu *[Window->Extensions->Search Menu]*.
 
 # License
 MIT

@@ -141,27 +141,3 @@ option .placeholder{
 
 .whiteText {color: white;}
 .noBorder {border: none;}
-
-.buttonGreen {background-color: #4CAF50;  border: none; color: white;} /* Green */
-.buttonBlue {background-color: #008CBA;} /* Blue */
-.buttonRed {background-color: #f44336;  border: none; color: white;} /* Red */ 
-.buttonGray {background-color: #e7e7e7; color: black;  border: none;} /* Gray */ 
-.buttonBlack {background-color: #555555;  border: none; color: white;} /* Black */
-
-.button1 {font-size: 10px;}
-.button2 {font-size: 12px;}
-.button3 {font-size: 16px;}
-.button4 {font-size: 20px;}
-.button5 {font-size: 24px;}
-
-.button1 {padding: 10px 24px;}
-.button2 {padding: 12px 28px;}
-.button3 {padding: 14px 40px;}
-.button4 {padding: 32px 16px;}
-.button5 {padding: 36px;}
-
-.button1 {border-radius: 2px;}
-.button2 {border-radius: 4px;}
-.button3 {border-radius: 8px;}
-.button4 {border-radius: 12px;}
-.button5 {border-radius: 50%;}

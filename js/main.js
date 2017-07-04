@@ -17,12 +17,10 @@ function redirect() {
 
 function onLoad() {
   $select2Obj.val("").trigger("change");
-//  $select2Obj.select2("val", "");
   $select2Obj.select2("open");
 }
 
 $select2Obj.on("select2:select", function (e) { 
-//  smallUI();
   var value = $("#menuList").val();
   doAction(value);
   window.close();
@@ -69,13 +67,6 @@ function getHTMLFile() {
 }
 
 
-function createHTML_old() {
-  var tempFile = getDataFile();
-  new CSInterface().evalScript("$._Ext_IDSN.selectWithOptions()", function(result) {
-    window.cep.fs.writeFile(tempFile, result);
-  });
-}
-
 function generateHTMLFile() {
   var htmlFile = getHTMLFile();
   new CSInterface().evalScript("$._Ext_IDSN.generateHTML()", function(result) {
@@ -89,12 +80,7 @@ function generateHTMLFile() {
 
 $('input').on('keydown', function(e) {
   var key = e.which;
-  //if (key == 13) { // the enter key code
-    //doAction($("#menuList").val());
-    //window.close();
-  //}
   if (key == 27) { // the escape key code
-    //$('#menuList').select2().select2('close');
     $select2Obj.select2("close");
     window.close();
   }

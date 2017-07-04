@@ -30,7 +30,6 @@
             <Parameter>- -enable-media-stream</Parameter>
           </CEFCommandLine>
           -->
-          <ScriptPath>./jsx/id.jsx</ScriptPath>
           <ScriptPath>./jsx/ddl.jsx</ScriptPath>
         </Resources>
         <!--Lifecycle>
